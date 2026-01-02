@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Poll-by-Poll Map - 2025 Election",
-  description:
-    "Interactive, detailed map of the 2025 Canadian federal election.",
-  openGraph: {
-    title: "Poll-by-Poll Map - 2025 Election",
-    description:
-      "Interactive, detailed map of the 2025 Canadian federal election.",
-  },
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Poll-by-Poll Map - 2025 Election",
+//   description:
+//     "Interactive, detailed map of the 2025 Canadian federal election.",
+//   openGraph: {
+//     title: "Poll-by-Poll Map - 2025 Election",
+//     description:
+//       "Interactive, detailed map of the 2025 Canadian federal election.",
+//   },
+//   icons: {
+//     icon: "/favicon.svg",
+//   },
+// };
 
 export default function RootLayout({
   children,
@@ -35,7 +35,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:image" content="/favicon.svg" />
+        <title>2025 Poll-by-Poll Results Map</title>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="Interactive, detailed map of the 2025 Canadian federal election."
+        />
+        <meta property="og:title" content="2025 Poll-by-Poll Results Map" />
+        <meta
+          property="og:description"
+          content="Interactive, detailed map of the 2025 Canadian federal election."
+        />
+        <meta
+          property="og:image"
+          content="https://e25.noratastic.ca/favicon.svg"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
         <meta name="theme-color" content="#EF3340" />

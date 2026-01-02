@@ -1,3 +1,4 @@
+"use client";
 import CanadaMap from "@/components/canada-map";
 
 export default function Home() {
